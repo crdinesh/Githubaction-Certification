@@ -1,10 +1,14 @@
-name: First Workflow
+name: Multi Line WorkFlow
 on: push
 jobs:
-   First_JOB:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Welcome Message
-      run: echo "My First Github Actions Job"
-    - name: List Files
-      run: ls
+    MultiLine_JOB:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout to REPO
+          uses: actions/checkout@v5
+        - name: List and Read Contents
+          run: |
+            echo "MultiLine Workflow"
+            ls -ltra
+            cat README.md
+
