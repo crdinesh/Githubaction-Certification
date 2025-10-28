@@ -11,4 +11,7 @@ jobs:
             echo "MultiLine Workflow"
             ls -ltra
             cat README.md
+        
+        - name: Generate ASCII Framework
+          run: cowsay -f dragon "RUN FOR COVER,I AM A DRAGON.....RAWR" >> Dragon.txt
 
