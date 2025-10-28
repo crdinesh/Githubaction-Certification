@@ -1,0 +1,13 @@
+name: Multi Line WorkFlow
+on: push
+jobs:
+    MultiLine_JOB:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout to REPO
+          uses: actions/checkout@v5
+        - name: List and Read Contents
+          run: |
+          echo "MultiLine Workflow"
+          ls -ltra
+          cat README.md
