@@ -9,4 +9,4 @@ jobs:
     - name: List REPO Files
       run: ls -ltra
     - name: Executing Shell Script
-      run: ./ascii-script.sh
+      run: ../../ascii-script.sh
