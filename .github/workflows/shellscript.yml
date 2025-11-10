@@ -1,4 +1,4 @@
-name: Multi Line WorkFlow
+name: Shell script WorkFlow
 on: push
 jobs:
   SHELL_JOB:
