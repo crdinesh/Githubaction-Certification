@@ -1,0 +1,12 @@
+name: Multi Line WorkFlow
+on: push
+jobs:
+  SHELL_JOB:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout to REPO
+      uses: actions/checkout@v5
+    - name: List REPO Files
+      run: ls -ltra
+    - name: Executing Shell Script
+      run: ./ascii-script.sh
