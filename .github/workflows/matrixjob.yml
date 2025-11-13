@@ -3,19 +3,41 @@ on:
     push:
     workflow_dispatch:
 jobs:
-    Deploys-on-ubuntu:
-        runs-on: ubuntu-latest
-        steps:
-        - name: Echo Docker Details
-          run: docker info
-        - name: Run Images
-          run: docker run hello-world
-    Deploys-on-Windows:
-        runs-on: windows-latest
-        steps:
-        - name: Echo Docker Details
-          run: docker info
-        - name: Run Images
-          run: docker run hello-world
+  deploy:
+    strategy:
+      matrix:
+        os: [Windows,ubuntu]
+        images: [hello-world,alpine]
+    runs-on: ${{matrix.os}}
+    steps:
+    - name: Echo Docker Details
+      run: docker info
+    - name: Run Images on ${{matrix.images}}
+      run: docker run ${{matrix.images}}
+
+
+
+
+
+
+
+
+
+
+    ### First RUN#####################
+    # Deploys-on-ubuntu:
+    #     runs-on: ubuntu-latest
+    #     steps:
+    #     - name: Echo Docker Details
+    #       run: docker info
+    #     - name: Run Images
+    #       run: docker run hello-world
+    # Deploys-on-Windows:
+    #     runs-on: windows-latest
+    #     steps:
+    #     - name: Echo Docker Details
+    #       run: docker info
+    #     - name: Run Images
+    #       run: docker run hello-world
         
 

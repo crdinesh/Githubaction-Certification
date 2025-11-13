@@ -14,4 +14,4 @@
                    cancel-in-progress: false --> will wait for the job to get finish
 
               ##7. timeout in minutes --> 
-              ##8. Matrix strategy --> 
+              ##8. Matrix strategy --> variations for each job
