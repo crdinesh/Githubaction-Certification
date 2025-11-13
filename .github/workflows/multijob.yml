@@ -13,10 +13,17 @@ jobs:
         runs-on: ubuntu-latest
         needs: First_job
         steps:
+            - name: Sleep for 20 seconds
+              run: Sleep 20
             - name: List of Directories
               run: ls -ltra
+            - name: Search for dragon
+              run: grep -i "dragon" dragon.txt
     Third_job:
         runs-on: ubuntu-latest
+        needs: [First_job,Second_job]
         steps:
+            - name: Read the Dragon text
+              run: cat dragon.txt
             - name: Print the name
               run: echo "KRISHNA"
