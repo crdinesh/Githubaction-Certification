@@ -15,4 +15,4 @@
 
               ##7. timeout in minutes --> 
               ##8. Matrix strategy --> variations for each job
-              in this strategy if 6 jobs are running 3 are completed , 1 has failed then it will cancell all the other running jobs (Default strategy)
+              in this strategy if 6 jobs are running 3 are completed , 1 has failed then it will cancell all the other running jobs (Default strategy)  
